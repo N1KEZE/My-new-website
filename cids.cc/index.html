@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+    <title>CID</title>
+    <link rel="icon" type="image/png" content="https://cdn.discordapp.com/avatars/738730311164362812/a_73fecf4ffffdecb2479c40a569755f31.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="collinondex.cc">
+    <meta property="og:description" content="Hello i am CollinOnDex on YouTube & collinondex on Discord.">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/738730311164362812/a_73fecf4ffffdecb2479c40a569755f31.gif">
+    <meta name="theme-color" content="#d74894">
+    <link rel="icon" href=".png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Adjustments for smaller screens */
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            .rounded-button,
+            .second-button,
+            .third-button {
+                width: 150px;
+                height: 30px;
+                font-size: 14px;
+            }
+            .fullscreen.text-content h1 {
+                font-size: 2.5em;
+            }
+            .fullscreen.text-content p {
+                font-size: 1em;
+            }
+            /* Adjustments for slider */
+            .slider {
+                width: 70% !important;
+            }
+            /* Adjustments for image */
+            .fade-in-text img {
+                max-width: 70%;
+                height: auto;
+            }
+            /* Adjustments for volume bar */
+            .volume-container {
+                width: 100%;
+            }
+        }
+
+        /* Adjustments for very small screens (320x480) */
+
+        @media (max-width: 320px) and (max-height: 480px) {
+            .rounded-button,
+            .second-button,
+            .third-button {
+                width: 70px;
+                height: 20px;
+                font-size: 10px;
+                padding: 2px 2px;
+                margin: 20px 0;
+            }
+            .fullscreen.text-content h1 {
+                font-size: 1.2em;
+            }
+            .fullscreen.text-content p {
+                font-size: 0.9em;
+            }
+            /* Adjustments for slider */
+            .slider {
+                width: 60% !important;
+            }
+            /* Adjustments for volume bar */
+            .volume-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            img {
+                max-width: 110%;
+                /* Adjust this percentage as needed */
+                display: block;
+                margin: 0 auto;
+                /* This will center the image horizontally */
+            }
+        }
+
+        .bg-video {
+            width: 100%;
+            /* Set the video width to 100% of the container */
+            height: auto;
+            /* Let the height adjust proportionally */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the container */
+        }
+
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        (function(c, l, a, r, i, t, y) {
+            c[a] = c[a] || function() {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "ii30us82zt");
+    </script>
+
+
+</head>
+
+<body>
+    <main>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+
+
+        <script>
+            function audioPlay() {
+                var audio = document.getElementById("audio");
+                audio.volume = 1.0;
+                audio.play();
+            }
+
+            function videoPlay() {
+                var video = document.getElementById("video");
+                video.play();
+            }
+        </script>
+
+        <input type="checkbox" autocomplete="off" id="overlay-toggle">
+        <div class="overlay fullscreen">
+            <label for="overlay-toggle" onclick="audioPlay();videoPlay()">
+                <span class="no-hover" style="font-family: mono; font-size: 0.6em;">why not click?</span>
+                <span class="hover" style="font-family: mono; font-size: 0.6em;">why not click?</span>
+            </label>
+        </div>
+        <video loop playsinline preload="auto" class="fullscreen bg-video" id="background-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            const video = document.getElementById("background-video");
+            video.autoplay = true;
+            video.muted = true;
+
+            // Play the video when it's ready
+            video.addEventListener('canplay', function() {
+                video.play();
+            });
+        </script>
+
+
+
+        <audio id="audio" loop autoplay>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+
+        <video muted="muted" loop playsinline preload="auto" class="fullscreen bg-video" id="video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <section class="fullscreen text-content">
+            <h1 style="font-family: derk; text-shadow: 0 0 0.40em #dd00ff;" class="heading">CID ϟ</h1>
+
+
+
+
+
+
+            <a href="https://discord.com/users/961072290056011807" target="_blank" class="discord-link">
+  <img src="https://discord.c99.nl/widget/theme-4/961072290056011807.png" alt="Discord">
+</a>
+
+
+        </section>
+
+        <div class="socials">
+            <a href="https://discord.com/users/961072290056011807" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;">cvvss</a>
+            <a href="https://discord.gg/EWMb62cMm" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;">Discord</a>
+            <a href="https://www.youtube.com/embed/ZzyPZKO46ow?&autoplay=1" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;"> </a>
+            <br>
+        </div>
+        <div class="volume-container">
+            <input type="range" min="0" max="1" step="0.1" value="1" id="volumeControl" class="slider">
+            <button id="muteButton">🔊</button>
+        </div>
+
+        <script>
+            const audio = document.getElementById("audio");
+            const volumeControl = document.getElementById("volumeControl");
+            const muteButton = document.getElementById("muteButton");
+
+            volumeControl.addEventListener("input", function() {
+                if (volumeControl.value == 0 && !audio.muted) {
+                    audio.muted = true;
+                    muteButton.textContent = "🔇";
+                } else if (volumeControl.value > 0 && audio.muted) {
+                    audio.muted = false;
+                    muteButton.textContent = "🔊";
+                }
+                audio.volume = volumeControl.value;
+            });
+
+            muteButton.addEventListener("click", function() {
+                if (audio.muted) {
+                    audio.muted = false;
+                    muteButton.textContent = "🔊";
+                    volumeControl.value = 1;
+                    audio.volume = volumeControl.value;
+                } else {
+                    audio.muted = true;
+                    muteButton.textContent = "🔇";
+                    volumeControl.value = 0;
+                    audio.volume = volumeControl.value;
+                }
+            });
+        </script>
+
+        <!-- chat interface -->
+        <div class="container chat-container">
+            <div class="border border-left"></div>
+            <div class="border border-right"></div>
+            <div class="border border-top"></div>
+            <div class="border border-bottom"></div>
+            <div class="border-angle angle-top-left"></div>
+            <div class="border-angle angle-top-right"></div>
+            <div class="border-angle angle-bottom-left"></div>
+            <div class="border-angle angle-bottom-right"></div>
+
+            <div>
+                <ul id="chat">
+                    <li class="message">CID > Type 'help' to get list of commands.</li>
+                </ul>
+                <input type="text" name="myInput" placeholder=">_" id="cli">
+            </div>
+        </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.2/dist/splitting.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.2/dist/splitting-cells.min.js"></script>
+        <script src="script.js"></script>
+
+
+
+        </head>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <div class="social-icons">
+            <a href="https://pastebin.com/hLiRJNB4" target="_blank" class="socialslogo" title="Pastebin">
+    <img src="pastebin.png" alt="Pastebin">
+    <span class="tooltip">Pastebin</span>
+  </a>
+            <a href="https://twitter.com/cids1337?t=JxrtPl7KP5DkCv1t-0hj8g" target="_blank" class="socialslogo" title="Twitter">
+    <img src="twitter.png" alt="Twitter">
+    <span class="tooltip">Twitter</span>
+  </a>
+            <a href="https://discord.gg/7rsYPb7A6j" target="_blank" class="socialslogo" title="Discord">
+    <img src="discord.png" alt="Discord">
+    <span class="tooltip">Discord</span>
+  </a>
+            <a href="https://www.youtube.com/channel/UCuEcZyXJWaURoyHhqqLrVxw" target="_blank" class="socialslogo" title="YouTube">
+    <img src="youtube.png" alt="YouTube">
+    <span class="tooltip">YouTube</span>
+  </a>
+            <a href="https://cash.app/$cid1337" target="_blank" class="socialslogo" title="CashApp">
+    <img src="cashapp.png" alt="Cash App">
+    <span class="tooltip">Cash App</span>
+  </a>
+            <a href="https://steamcommunity.com/id/cid1337/" target="_blank" class="socialslogo" title="Steam(Main Account)">
+    <img src="steam.png" alt="Main Steam">
+    <span class="tooltip">Steam(Main Account)</span>
+  </a>
+            <a href="https://steamcommunity.com/id/cids1337/" target="_blank" class="socialslogo" title="Steam(Alt Account)">
+    <img src="steamalt.png" alt="Alt Steam">
+    <span class="tooltip">Steam(Alt Account)</span>
+  </a>
+            </a>
+            <a href="https://cids.sellauth.com/" target="_blank" class="socialslogo" title="Collin's Shop">
+    <img src="store.png" alt="Store">
+    <span class="tooltip">Collin's Shop</span>
+  </a>
+        </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
