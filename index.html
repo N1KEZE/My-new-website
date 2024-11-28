@@ -122,12 +122,6 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ii30us82zt");
 </script>
-
-<script type="module">
-  import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
-
-  new fairyDustCursor();
-</script>
 	
 </head>
 <body>
@@ -183,11 +177,11 @@
         </audio>
 
         <video muted="muted" loop playsinline preload="auto" class="fullscreen bg-video" id="video">
-            <source src="video.mp4" type="video/mp4">
+            <source src="https://files.catbox.moe/fh40di.mp4" type="video/mp4">
         </video>
 
         <section class="fullscreen text-content">
-			<h1 style="font-family: derk; text-shadow: 0 0 0.40em #dd00ff;" class="heading">I nikeze I</h1>
+			<h1 style="font-family: derk; text-shadow: 0 0 0.40em #ffffff;" class="heading">nikeze</h1>
 
 
 
@@ -212,42 +206,6 @@
             <input type="range" min="0" max="1" step="0.1" value="1" id="volumeControl" class="slider">
             <button id="muteButton">🔊</button>
         </div>
-
-        <script>
-            const audio = document.getElementById("audio");
-            const volumeControl = document.getElementById("volumeControl");
-            const muteButton = document.getElementById("muteButton");
-
-            volumeControl.addEventListener("input", function() {
-                if (volumeControl.value == 0 && !audio.muted) {
-                    audio.muted = true;
-                    muteButton.textContent = "🔇";
-                } else if (volumeControl.value > 0 && audio.muted) {
-                    audio.muted = false;
-                    muteButton.textContent = "🔊";
-                }
-                audio.volume = volumeControl.value;
-            });
-
-            muteButton.addEventListener("click", function() {
-                if (audio.muted) {
-                    audio.muted = false;
-                    muteButton.textContent = "🔊";
-                    volumeControl.value = 1;
-                    audio.volume = volumeControl.value;
-                } else {
-                    audio.muted = true;
-                    muteButton.textContent = "🔇";
-                    volumeControl.value = 0;
-                    audio.volume = volumeControl.value;
-                }
-            });
-			
-			
-        </script>
-
-    <script src="script.js"></script>
-
 
   </head>
 <br></br>
