@@ -57,18 +57,6 @@
                 height: auto;
             }
 
-        .visitor-count {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
-
             /* Adjustments for volume bar */
             .volume-container {
                 width: 100%;
@@ -125,28 +113,6 @@
 
     </style>
 
-    <script>
-        window.onload = function() {
-            // Get the current visit count from localStorage
-            let visitorCount = localStorage.getItem('visitorCount');
-            if (!visitorCount) {
-                // If it's the first visit, set the visitor count to 1
-                visitorCount = 1;
-            } else {
-                // Otherwise, increment the count by 1
-                visitorCount = parseInt(visitorCount) + 1;
-            }
-
-            // Update the localStorage with the new count
-            localStorage.setItem('visitorCount', visitorCount);
-
-            // Display the visitor count in the bottom-right corner
-            const visitorElement = document.createElement('div');
-            visitorElement.className = 'visitor-count';
-            visitorElement.textContent = 'Visitors: ' + visitorCount;
-            document.body.appendChild(visitorElement);
-        };
-    </script>
 
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
