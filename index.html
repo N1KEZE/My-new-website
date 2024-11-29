@@ -23,12 +23,7 @@
             line-height: 1.5;
         }
 
-        .bg-video {
-            width: 100%; 
-            height: auto; 
-            object-fit: cover; 
-        }
-
+        /* Adjustments for smaller screens */
         @media (max-width: 768px) {
             body {
                 font-size: 14px;
@@ -56,6 +51,7 @@
             }
         }
 
+        /* Adjustments for very small screens (320x480) */
         @media (max-width: 320px) and (max-height: 480px) {
             .rounded-button, .second-button, .third-button {
                 width: 70px;
@@ -77,15 +73,21 @@
                 width: 100%;
             }
         }
+		
+        .bg-video {
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+        }
     </style>
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ii30us82zt");
-</script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ii30us82zt");
+    </script>
 	
 </head>
 <body>
@@ -122,6 +124,9 @@
             video.autoplay = true;
             video.muted = true;
 
+            // Remove setTimeout and start the video immediately
+            video.play(); // Ensures the video starts right away
+
             // Play the video when it's ready
             video.addEventListener('canplay', function() {
                 video.play();
@@ -135,6 +140,7 @@
         <section class="fullscreen text-content">
             <h1 style="font-family: derk; text-shadow: 0 0 0.40em #ffffff;" class="heading">nikeze</h1>
 
+            <!-- Your sparkle and other scripts here -->
             <script>
             var colour="#FFFFFF";
             var sparkles=120;
@@ -197,7 +203,7 @@
                     if (starv[c]) update_star(c);
                     if (tinyv[c]) update_tiny(c);
                 }
-                requestAnimationFrame(sparkle); // Use requestAnimationFrame instead of setTimeout
+                requestAnimationFrame(sparkle); // Keep the sparkle effect going
             }
 
             function update_star(i) {
@@ -220,81 +226,3 @@
                     tiny[i].style.width = "2px";
                     tiny[i].style.height = "2px";
                     star[i].style.visibility = "hidden";
-                    tiny[i].style.visibility = "visible"
-                }
-            }
-
-            function update_tiny(i) {
-                if (--tinyv[i] == 25) {
-                    tiny[i].style.width = "1px";
-                    tiny[i].style.height = "1px";
-                }
-                if (tinyv[i]) {
-                    tinyy[i] += 1 + Math.random() * 3;
-                    if (tinyy[i] < shigh + sdown) {
-                        tiny[i].style.top = tinyy[i] + "px";
-                        tinyx[i] += (i % 5 - 2) / 5;
-                        tiny[i].style.left = tinyx[i] + "px";
-                    } else {
-                        tiny[i].style.visibility = "hidden";
-                        tinyv[i] = 0;
-                        return;
-                    }
-                } else tiny[i].style.visibility = "hidden";
-            }
-
-            document.onmousemove = mouse;
-            function mouse(e) {
-                set_scroll();
-                y = (e) ? e.pageY : event.y + sdown;
-                x = (e) ? e.pageX : event.x + sleft;
-            }
-
-            function set_scroll() {
-                if (typeof(self.pageYOffset) == "number") {
-                    sdown = self.pageYOffset;
-                    sleft = self.pageXOffset;
-                } else if (document.body.scrollTop || document.body.scrollLeft) {
-                    sdown = document.body.scrollTop;
-                    sleft = document.body.scrollLeft;
-                } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-                    sleft = document.documentElement.scrollLeft;
-                    sdown = document.documentElement.scrollTop;
-                } else {
-                    sdown = 0;
-                    sleft = 0;
-                }
-            }
-
-            window.onresize = set_width;
-            function set_width() {
-                if (typeof(self.innerWidth) == "number") {
-                    swide = self.innerWidth;
-                    shigh = self.innerHeight;
-                } else if (document.documentElement && document.documentElement.clientWidth) {
-                    swide = document.documentElement.clientWidth;
-                    shigh = document.documentElement.clientHeight;
-                } else if (document.body.clientWidth) {
-                    swide = document.body.clientWidth;
-                    shigh = document.body.clientHeight;
-                }
-            }
-
-            function createDiv(height, width) {
-                var div = document.createElement("div");
-                div.style.position = "absolute";
-                div.style.height = height + "px";
-                div.style.width = width + "px";
-                div.style.overflow = "hidden";
-                div.style.backgroundColor = colour;
-                return (div);
-            }
-            </script>
-
-            <a target="_blank" class="discord-link">
-                <img src="https://discord.c99.nl/widget/theme-4/1098902662415667212.png" alt="Discord">
-            </a>
-        </section>
-    </main>
-</body>
-</html>
