@@ -23,6 +23,16 @@
             line-height: 1.5;
         }
 
+        .circle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+        }
+
         /* Adjustments for smaller screens */
         @media (max-width: 768px) {
             body {
@@ -35,7 +45,6 @@
                 width: 150px;
                 height: 30px;
                 font-size: 14px;
-
             }
 
             .fullscreen.text-content h1 {
@@ -88,31 +97,18 @@
                 width: 60% !important;
             }
 
-
-
             /* Adjustments for volume bar */
             .volume-container {
                 width: 100%;
             }
         }
-		
-@media (max-width: 768px) {
-    img {
-        max-width: 110%; /* Adjust this percentage as needed */
-        display: block;
-        margin: 0 auto; /* This will center the image horizontally */
-    }
-}
-    .bg-video {
-        width: 100%; /* Set the video width to 100% of the container */
-        height: auto; /* Let the height adjust proportionally */
-        object-fit: cover; /* Maintain aspect ratio and cover the container */
-    }
-}
 
-
+        .bg-video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     </style>
-
 
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -129,7 +125,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
 
-
         <script>
             function audioPlay() {
                 var audio = document.getElementById("audio");
@@ -141,7 +136,6 @@
                 var video = document.getElementById("video");
                 video.play();
             }
-			
 
         </script>
 
@@ -161,12 +155,9 @@
             video.autoplay = true;
             video.muted = true;
 
-            // Play the video when it's ready
             video.addEventListener('canplay', function() {
                 video.play();
             });
-			
-
         </script>
 
         <video loop playsinline  class="fullscreen bg-video" id="video">
@@ -175,8 +166,6 @@
 
         <section class="fullscreen text-content">
 			<h1 style="font-family: derk; text-shadow: 0 0 0.40em #ffffff;" class="heading">nikeze</h1>
-
-
 
 <script>
 var colour="#FFFFFF";
@@ -269,121 +258,4 @@ function update_star(i) {
 }
 
 function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
-
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
-}
-
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-</script>
-
-<a target="_blank" class="discord-link">
-  <img src="https://discord.c99.nl/widget/theme-4/1098902662415667212.png" alt="Discord">
-</a>
-
-
-        </section>
-
-        <div class="socials">
-            <a href="https://discord.gg" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;">Discord</a>
-            <a href="https://www.youtube.com/embed/ZzyPZKO46ow?&autoplay=1" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;"> </a>
-            <a href="https://www.instagram.com/phil.wrth?igsh=MTY0dmRxZW8yNzBvNg%3D%3D&utm_source=qr" style="text-decoration:none; font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #dd00ff;">Instagram</a>
-
-			<br>
-        </div>
-        <div class="volume-container">
-            <input type="range" min="0" max="1" step="0.1" value="1" id="volumeControl" class="slider">
-            <button id="muteButton">🔊</button>
-        </div>
-
-  </head>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-
-<div class="social-icons">
-  <a href="https://discord.com/users/1098902662415667212" target="_blank" class="socialslogo" title="Discord">
-    <img src="discord.png" alt="Discord">
-    <span class="tooltip">Discord</span>
-  </a>
-    <a href="https://steamcommunity.com/id/PALLIAHH/" target="_blank" class="socialslogo" title="Steam">
-    <img src="steam.png" alt="Steam">
-    <span class="tooltip">Steam</span>
-  </a>
-  <a href="https://www.youtube.com/@N1KEXE" target="_blank" class="socialslogo" title="Instagram">
-    <img src="youtube.png" alt="Instagram">
-    <span class="tooltip">Instagram</span>
-    
-    </a>
-  </div>
-
-
-</body>
-</html>
+  if (--tinyv
