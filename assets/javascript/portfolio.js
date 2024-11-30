@@ -5,18 +5,7 @@ const ipgeolocation = 'https://api.ipgeolocation.io/ipgeo?apiKey=01b55f5cb22f427
 const timeouts = [];
 const mobileAndTabletCheck = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-$(document).ready(() => {
-  const links = [
-    {
-    
-    },
-    {
-     
-    },
-  ];
 
-  for (let i in links) {
-    let link = links[i];
 
     $('#marquee').append(`<a href="https://steamcommunity.com/profiles/${link.link}" target="_BLANK">${link.name}</a>`);
 
