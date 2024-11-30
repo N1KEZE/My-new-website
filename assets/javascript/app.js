@@ -19,9 +19,19 @@ class _app {
     "jello"
   ];
   brandDescription = [
-    "i got ratted :(",
-    "rust ontop"
-  ];
+    "nickeze on top",
+    "pasterrr :(",
+    "1 opp",
+    "chill",
+    "i got ratted",
+    "nickeze on top",
+    "nickeze on top",
+    "nickeze on top",
+    "nickeze on top",
+    "nickeze on top",
+    "nickeze on top",
+    "nickeze on top"
+   ];
 
   titleChanger = (text, delay) => {
     if (!text) return;
