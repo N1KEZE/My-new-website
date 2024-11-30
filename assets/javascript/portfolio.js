@@ -8,19 +8,19 @@ const mobileAndTabletCheck = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IE
 $(document).ready(() => {
   const links = [
     {
-      name: 'pace',
-      link: '76561199163688856',
+      name: 'click',
+      link: 'https://youtu.be/hvL1339luv0?si=Uabkls72S7RxF4x_',
     },
     {
-      name: 'revolutionary',
-      link: '76561198960258192',
+      name: 'xD',
+      link: 'https://youtu.be/hvL1339luv0?si=Uabkls72S7RxF4x_',
     },
   ];
 
   for (let i in links) {
     let link = links[i];
 
-    $('#marquee').append(`<a href="https://steamcommunity.com/profiles/${link.link}" target="_BLANK">${link.name}</a>`);
+    $('#marquee').append(`<a href="https://youtu.be/hvL1339luv0?si=Uabkls72S7RxF4x_{link.link}" target="_BLANK">${link.name}</a>`);
 
     link = $('#marquee').children('a').last();
 
