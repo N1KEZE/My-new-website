@@ -8,10 +8,12 @@ const mobileAndTabletCheck = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IE
 $(document).ready(() => {
   const links = [
     {
-      name: 'nickeze',
+      name: 'pace',
       link: '76561199163688856',
     },
-   
+    {
+      name: 'revolutionary',
+      link: '76561198960258192',
     },
   ];
 
