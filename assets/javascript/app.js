@@ -27,9 +27,9 @@ class _app {
     "1 enemy",
     "get doxxed nigger",
     "@thatnikeze",
-    "nickeze on top",
-    "nickeze on top",
-    "nickeze on top",
+    "I know who the fake people are. Just acting like i dont..",
+    "BONES on Top",
+    "Sodium - BONES",
     "nickeze on top"
    ];
 
