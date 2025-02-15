@@ -21,13 +21,13 @@ class _app {
   brandDescription = [
     "nickeze on top",
     "pasterrr :(",
-    "1 opp",
+    "the fug",
     "chill",
     "i got ratted",
     "1 enemy",
     "get doxxed nigger",
-    "@thatnikeze",
-    "I know who the fake people are. Just acting like i dont..",
+    "@fromfardecrypted",
+    "ehehehehe",
     "BONES on Top",
     "Sodium - BONES",
     "nickeze on top"
